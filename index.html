@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon-32x32.png"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>News Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header wrapper">
+      <a href="/"><img src="./image/logo.svg" alt="Homepage" class="header__logo" width="64" height="40"></a>
+      <nav class="nav" aria-label="Site">
+        <button class="nav__open" id="buttonOpen" aria-labelledby="nav-label" aria-expanded="false">
+          <span id="nav-label" hidden>navigation</span>
+          <svg width="40" height="17" viewBox="0 0 40 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect id="Rectangle" y="7" width="40" height="3" fill="#00001A" />
+            <rect id="Rectangle_2" y="14" width="40" height="3" fill="#00001A" />
+            <rect id="Rectangle_3" width="40" height="3" fill="#00001A" />
+          </svg>
+        </button>
+        <div class="nav__overlay" aria-hidden="true"></div>
+        <div class="nav__content" role="dialog" aria-labelledby="nav-label">
+          <button class="nav__close" id="buttonClose" aria-label="Close">
+            <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect id="Rectangle" x="2.91846" y="0.297211" width="40" height="3" transform="rotate(45 2.91846 0.297211)" fill="#00001A" />
+              <rect id="Rectangle_2" x="0.797363" y="28.5815" width="40" height="3" transform="rotate(-45 0.797363 28.5815)" fill="#00001A" />
+            </svg>
+          </button>
+          <ul class="header__links">
+            <li><a href="" class="header__link">home</a></li>
+            <li><a href="" class="header__link">new</a></li>
+            <li><a href="" class="header__link">popular</a></li>
+            <li><a href="" class="header__link">trending</a></li>
+            <li><a href="" class="header__link">categories</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <article class="wrapper grid">
+        <section class="feature">
+          <picture class="feature__picture">
+            <source media="(min-width:43.75em)" srcset="./image/feature-desktop.jpg 1x,./public/image/feature-desktop-2x.jpg 2x" width="730" height="300">
+            <img src="./image/feature-mobile.jpg" srcset="./public/image/feature-mobile-2x.jpg 2x" alt="Assortment of Colorful Blocks" class="feature__image" width="343" height="300">
+          </picture>
+          <h1 class="feature__headline">the bright future of web 3.0?</h1>
+          <div class="feature__description">
+            <p>we dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. but is it really fulfilling its promise?</p>
+            <a href="" class="feature__button">read more</a>
+          </div>
+        </section>
+        <section class="new">
+          <h2 class="new__title">new</h2>
+          <article class="new__post">
+            <h3><a href="" class="new__headline">hydrogen vs electric cars</a></h3>
+            <p class="new__description">will hydrogen-fueled cars ever catch up to evs?</p>
+          </article>
+          <article class="new__post">
+            <h3><a href="" class="new__headline">the downsides of ai artistry</a></h3>
+            <p class="new__description">what are the possible adverse effects of on-demand ai image generation?</p>
+          </article>
+          <article class="new__post">
+            <h3><a href="" class="new__headline">is vc funding drying up?</a></h3>
+            <p class="new__description">private funding by vc firms is down 50% yoy. we take a look at what that means.</p>
+          </article>
+        </section>
+        <section class="blog">
+          <article class="blog__item">
+            <img src="./image/news-1.jpg" alt="Retro Computer,Keyboard,Cassette Tapes on a Desk" class="blog__image">
+            <div class="blog__number">01</div>
+            <h3 class="blog__headline"><a href="">reviving retro pcs</a></h3>
+            <p class="blog__description">what happens when old pcs are given modern upgrades?</p>
+          </article>
+          <article class="blog__item">
+            <img src="./image/news-2.jpg" alt="Keyboard with Red Backlighting" class="blog__image">
+            <div class="blog__number">02</div>
+            <h3 class="blog__headline"><a href="">top 10 laptops of 2022</a></h3>
+            <p class="blog__description">our best picks for various needs and budgets.</p>
+          </article>
+          <article class="blog__item">
+            <img src="./image/news-3.jpg" alt="Game Controller in the Air Above a Hand" class="blog__image">
+            <div class="blog__number">03</div>
+            <h3 class="blog__headline"><a href="">The Growth of Gaming</a></h3>
+            <p class="blog__description">how the pandemic has sparked fresh opportunities.</p>
+          </article>
+        </section>
+      </article>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

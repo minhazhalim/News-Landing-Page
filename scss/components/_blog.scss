@@ -1,0 +1,40 @@
+@use '../util' as u;
+.blog {
+     display: grid;
+     gap: u.rem(30);
+     @media (width >= u.em(1110)){
+          grid-template-columns: subgrid;
+          grid-column: 1 / -1;
+          padding-block-start: u.rem(40);
+     }
+     &__item {
+          display: grid;
+          grid-template-columns: u.rem(100) auto;
+          grid-template-rows: repeat(3,auto);
+          gap: u.rem(10) u.rem(24);
+     }
+     &__image {
+          grid-row: 1 / 4;
+     }
+     &__number {
+          color: var(--color-silver);
+          font-size: var(--font-medium);
+          font-weight: 700;
+          line-height: 1;
+     }
+     &__headline {
+          align-self: center;
+          a {
+               color: var(--color-blue);
+               font-size: var(--font-extraSmall);
+               font-weight: 800;
+               line-height: 1.1;
+               &:hover {
+                    color: var(--color-red);
+               }
+          }
+     }
+     &__description {
+          align-self: end;
+     }
+}
